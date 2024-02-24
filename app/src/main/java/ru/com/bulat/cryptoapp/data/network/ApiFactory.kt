@@ -1,4 +1,4 @@
-package ru.com.bulat.cryptoapp.api
+package ru.com.bulat.cryptoapp.data.network
 
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

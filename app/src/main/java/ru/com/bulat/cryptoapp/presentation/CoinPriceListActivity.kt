@@ -1,13 +1,12 @@
-package ru.com.bulat.cryptoapp
+package ru.com.bulat.cryptoapp.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import ru.com.bulat.cryptoapp.adapters.CoinInfoAdapter
-import ru.com.bulat.cryptoapp.databinding.ActivityCoinDetailBinding
+import ru.com.bulat.cryptoapp.presentation.adapters.CoinInfoAdapter
 import ru.com.bulat.cryptoapp.databinding.ActivityCoinPrceListBinding
-import ru.com.bulat.cryptoapp.pojo.CoinPriceInfo
+import ru.com.bulat.cryptoapp.data.model.CoinPriceInfo
 
 class CoinPriceListActivity : AppCompatActivity() {
 

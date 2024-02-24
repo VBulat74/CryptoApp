@@ -1,11 +1,11 @@
-package ru.com.bulat.cryptoapp.pojo
+package ru.com.bulat.cryptoapp.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import ru.com.bulat.cryptoapp.utils.convertTimestampToTime
-import ru.com.bulat.cryptoapp.api.ApiFactory.BASE_IMAGE_URL
+import ru.com.bulat.cryptoapp.data.network.ApiFactory.BASE_IMAGE_URL
 
 @Entity(tableName = "full_price_list")
 data class CoinPriceInfo(

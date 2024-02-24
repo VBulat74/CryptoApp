@@ -1,4 +1,4 @@
-package ru.com.bulat.cryptoapp
+package ru.com.bulat.cryptoapp.presentation
 
 import android.content.Context
 import android.content.Intent

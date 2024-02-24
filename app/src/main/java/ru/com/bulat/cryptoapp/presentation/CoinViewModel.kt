@@ -1,4 +1,4 @@
-package ru.com.bulat.cryptoapp
+package ru.com.bulat.cryptoapp.presentation
 
 import android.app.Application
 import android.util.Log
@@ -8,10 +8,10 @@ import androidx.lifecycle.LiveData
 import com.google.gson.Gson
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import ru.com.bulat.cryptoapp.api.ApiFactory
-import ru.com.bulat.cryptoapp.database.AppDatabase
-import ru.com.bulat.cryptoapp.pojo.CoinPriceInfo
-import ru.com.bulat.cryptoapp.pojo.CoinPriceInfoRawData
+import ru.com.bulat.cryptoapp.data.network.ApiFactory
+import ru.com.bulat.cryptoapp.data.database.AppDatabase
+import ru.com.bulat.cryptoapp.data.model.CoinPriceInfo
+import ru.com.bulat.cryptoapp.data.model.CoinPriceInfoRawData
 import java.util.concurrent.TimeUnit
 
 class CoinViewModel(application: Application) : AndroidViewModel(application) {

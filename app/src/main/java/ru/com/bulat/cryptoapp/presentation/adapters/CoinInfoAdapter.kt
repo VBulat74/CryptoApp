@@ -1,4 +1,4 @@
-package ru.com.bulat.cryptoapp.adapters
+package ru.com.bulat.cryptoapp.presentation.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import ru.com.bulat.cryptoapp.R
 import ru.com.bulat.cryptoapp.databinding.ItemCoinInfoBinding
-import ru.com.bulat.cryptoapp.pojo.CoinPriceInfo
+import ru.com.bulat.cryptoapp.data.model.CoinPriceInfo
 
 class CoinInfoAdapter(private val context: Context) : RecyclerView.Adapter<CoinInfoAdapter.CoinInfoViewHolder>() {
 

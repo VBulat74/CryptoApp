@@ -1,4 +1,4 @@
-package ru.com.bulat.cryptoapp.pojo
+package ru.com.bulat.cryptoapp.data.model
 
 import com.google.gson.JsonObject
 import com.google.gson.annotations.Expose

@@ -1,10 +1,10 @@
-package ru.com.bulat.cryptoapp.api
+package ru.com.bulat.cryptoapp.data.network
 
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
-import ru.com.bulat.cryptoapp.pojo.CoinInfoListOfData
-import ru.com.bulat.cryptoapp.pojo.CoinPriceInfoRawData
+import ru.com.bulat.cryptoapp.data.model.CoinInfoListOfData
+import ru.com.bulat.cryptoapp.data.model.CoinPriceInfoRawData
 
 interface ApiService {
 

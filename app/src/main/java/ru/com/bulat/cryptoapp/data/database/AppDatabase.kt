@@ -1,10 +1,10 @@
-package ru.com.bulat.cryptoapp.database
+package ru.com.bulat.cryptoapp.data.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import ru.com.bulat.cryptoapp.pojo.CoinPriceInfo
+import ru.com.bulat.cryptoapp.data.model.CoinPriceInfo
 
 
 @Database(entities = [CoinPriceInfo::class], version = 1, exportSchema = false)
