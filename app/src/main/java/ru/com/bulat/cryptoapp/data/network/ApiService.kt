@@ -1,26 +1,25 @@
 package ru.com.bulat.cryptoapp.data.network
 
-import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
-import ru.com.bulat.cryptoapp.data.model.CoinInfoListOfData
-import ru.com.bulat.cryptoapp.data.model.CoinPriceInfoRawData
+import ru.com.bulat.cryptoapp.data.network.model.CoinInfoJsonContainerDto
+import ru.com.bulat.cryptoapp.data.network.model.CoinNameListDto
 
 interface ApiService {
 
     @GET("top/totalvolfull")
-    fun getTopCoinsInfo(
+    suspend fun getTopCoinsInfo(
         @Query(QUERY_PARAM_API_KEY) apiKey: String = "",
         @Query(QUERY_PARAM_LIMIT) limit: Int = 10,
         @Query(QUERY_PARAM_TO_SYMBOL) tSym: String = CURRENCY
-    ): Single<CoinInfoListOfData>
+    ): CoinNameListDto
 
     @GET("pricemultifull")
-    fun getFullPriceList(
+    suspend fun getFullPriceList(
         @Query(QUERY_PARAM_API_KEY) apiKey: String = "",
         @Query(QUERY_PARAM_FROM_SYMBOLS) fSyms: String,
         @Query(QUERY_PARAM_TO_SYMBOLS) tSyms: String = CURRENCY
-    ): Single<CoinPriceInfoRawData>
+    ): CoinInfoJsonContainerDto
 
     companion object {
         private const val QUERY_PARAM_API_KEY = "53ddc3f1d2a1def18f570fbfb786739f0bf7c21f81acbef7364d92def50d3da6"

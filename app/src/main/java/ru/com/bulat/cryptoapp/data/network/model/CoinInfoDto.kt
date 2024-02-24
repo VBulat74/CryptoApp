@@ -1,4 +1,4 @@
-package ru.com.bulat.cryptoapp.data.model
+package ru.com.bulat.cryptoapp.data.network.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -8,7 +8,7 @@ import ru.com.bulat.cryptoapp.utils.convertTimestampToTime
 import ru.com.bulat.cryptoapp.data.network.ApiFactory.BASE_IMAGE_URL
 
 @Entity(tableName = "full_price_list")
-data class CoinPriceInfo(
+data class CoinInfoDto(
     @SerializedName("TYPE")
     @Expose
     val type: String?,
