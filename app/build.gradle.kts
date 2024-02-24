@@ -47,6 +47,7 @@ dependencies {
     //coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 
     //Retrofit 2
     implementation ("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
@@ -61,26 +62,6 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.8")
 
     implementation ("androidx.work:work-runtime-ktx:2.9.0")
-
-//    // ViewModel
-//    implementation("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
-//    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-//    //implementation ("android.arch.lifecycle:extensions:1.1.1")
-//    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
-//
-//    // LiveData
-//    implementation("androidx.lifecycle:lifecycle-livedata:2.7.0")
-//    // optional - ReactiveStreams support for LiveData
-//    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.7.0")
-//    // Annotation processor
-////    ksp("androidx.lifecycle:lifecycle-compiler:2.7.0")
-////    // alternately - if using Java8, use the following instead of lifecycle-compiler
-////    implementation("androidx.lifecycle:lifecycle-common-java8:2.7.0")
-//
-//    implementation ("com.google.code.gson:gson:2.10")
-//
-//    implementation ("io.reactivex.rxjava2:rxandroid:2.1.1")
-//    implementation ("io.reactivex.rxjava2:rxjava:2.2.9")
 
 
     implementation("androidx.core:core-ktx:1.12.0")
