@@ -4,8 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.squareup.picasso.Picasso
 import ru.com.bulat.cryptoapp.R
 import ru.com.bulat.cryptoapp.databinding.ActivityCoinDetailBinding
 
