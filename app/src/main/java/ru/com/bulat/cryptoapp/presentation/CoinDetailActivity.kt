@@ -6,9 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.squareup.picasso.Picasso
-import ru.com.bulat.cryptoapp.data.network.ApiFactory.BASE_IMAGE_URL
 import ru.com.bulat.cryptoapp.databinding.ActivityCoinDetailBinding
-import ru.com.bulat.cryptoapp.utils.convertTimestampToTime
 
 
 class CoinDetailActivity : AppCompatActivity() {
@@ -34,10 +32,10 @@ class CoinDetailActivity : AppCompatActivity() {
                 tvMinPrice.text = it.lowDay
                 tvMaxPrice.text = it.highDay
                 tvLastMarket.text = it.lastMarket
-                tvLastUpdate.text = convertTimestampToTime(it.lastUpdate)
+                tvLastUpdate.text = it.lastUpdate
                 tvFromSymbol.text = it.fromSymbol
                 tvToSymbol.text = it.toSymbol
-                Picasso.get().load(BASE_IMAGE_URL + it.imageUrl).into(ivLogoCoin)
+                Picasso.get().load(it.imageUrl).into(ivLogoCoin)
             }
         }
     }
