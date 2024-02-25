@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.squareup.picasso.Picasso
-import ru.com.bulat.cryptoapp.databinding.ActivityCoinDetailBinding
 import ru.com.bulat.cryptoapp.databinding.FragmentCoinDetailBinding
 
 
