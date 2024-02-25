@@ -10,7 +10,7 @@ import ru.com.bulat.cryptoapp.databinding.ItemCoinInfoBinding
 import ru.com.bulat.cryptoapp.domain.CoinInfo
 
 class CoinInfoAdapter(private val context: Context) :
-    RecyclerView.Adapter<CoinInfoAdapter.CoinInfoViewHolder>() {
+    RecyclerView.Adapter<CoinInfoViewHolder>() {
 
     var coinInfoList: List<CoinInfo> = listOf()
         set(value) {
@@ -21,10 +21,12 @@ class CoinInfoAdapter(private val context: Context) :
     var onCoinClickListener: OnCoinClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinInfoViewHolder {
-//        val view =
-//            LayoutInflater.from(parent.context).inflate(R.layout.item_coin_info, parent, false)
         val binding =
-            ItemCoinInfoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemCoinInfoBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
         return CoinInfoViewHolder(binding)
     }
 
@@ -32,7 +34,7 @@ class CoinInfoAdapter(private val context: Context) :
 
     override fun onBindViewHolder(holder: CoinInfoViewHolder, position: Int) {
         val coin = coinInfoList[position]
-        with(holder) {
+        with(holder.binding) {
             with(coin) {
                 val symbolsTemplate = context.resources.getString(R.string.symbols_template)
                 val lastUpdateTemplate = context.resources.getString(R.string.last_update_template)
@@ -41,19 +43,11 @@ class CoinInfoAdapter(private val context: Context) :
                 tvLastUpdate.text =
                     String.format(lastUpdateTemplate, lastUpdate)
                 Picasso.get().load(imageUrl).into(ivLogoCoin)
-                itemView.setOnClickListener {
+                root.setOnClickListener {
                     onCoinClickListener?.onCoinClick(this)
                 }
             }
         }
-    }
-
-    inner class CoinInfoViewHolder(binding: ItemCoinInfoBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        val ivLogoCoin = binding.ivLogoCoin
-        val tvSymbols = binding.tvSymbols
-        val tvPrice = binding.tvPrice
-        val tvLastUpdate = binding.tvLastUpdate
     }
 
     interface OnCoinClickListener {
