@@ -2,8 +2,6 @@ package ru.com.bulat.cryptoapp.presentation
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.launch
 import ru.com.bulat.cryptoapp.data.repository.CoinRepositoryImpl
 import ru.com.bulat.cryptoapp.domain.GetCoinInfoListUseCase
 import ru.com.bulat.cryptoapp.domain.GetCoinInfoUseCase
@@ -19,11 +17,9 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
 
     val coinInfoList = getCoinInfoListUseCase()
 
-    fun getDetailInfo(fSym: String) =  getCoinInfoUseCase(fSym)
+    fun getDetailInfo(fSym: String) = getCoinInfoUseCase(fSym)
 
     init {
-        viewModelScope.launch {
-            loadDaUseCase()
-        }
+        loadDaUseCase()
     }
 }
