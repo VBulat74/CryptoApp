@@ -11,6 +11,7 @@ import ru.com.bulat.cryptoapp.presentation.CoinPriceListActivity
 @Component(modules = [
     DataModule::class,
     ViewModelModule::class,
+    WorkerModule::class,
 ])
 interface AppComponent {
 
