@@ -7,8 +7,9 @@ import androidx.work.WorkerParameters
 import ru.com.bulat.cryptoapp.data.database.CoinInfoDao
 import ru.com.bulat.cryptoapp.data.maper.CoinMapper
 import ru.com.bulat.cryptoapp.data.network.ApiService
+import javax.inject.Inject
 
-class RefreshDataWorkerFactory (
+class RefreshDataWorkerFactory @Inject constructor (
     private val coinInfoDao: CoinInfoDao,
     private val apiService: ApiService,
     private val mapper: CoinMapper,

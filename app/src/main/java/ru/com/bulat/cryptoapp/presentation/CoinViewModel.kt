@@ -5,9 +5,7 @@ import ru.com.bulat.cryptoapp.domain.GetCoinInfoListUseCase
 import ru.com.bulat.cryptoapp.domain.GetCoinInfoUseCase
 import ru.com.bulat.cryptoapp.domain.LoadDataUseCase
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
 class CoinViewModel @Inject constructor(
     private val getCoinInfoListUseCase : GetCoinInfoListUseCase,
     private val getCoinInfoUseCase : GetCoinInfoUseCase,
