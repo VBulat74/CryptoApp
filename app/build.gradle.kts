@@ -63,6 +63,9 @@ dependencies {
 
     implementation ("androidx.work:work-runtime-ktx:2.9.0")
 
+    implementation ("com.google.dagger:dagger:2.50")
+    ksp ("com.google.dagger:dagger-compiler:2.50")
+
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
